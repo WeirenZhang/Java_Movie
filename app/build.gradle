@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+def androidId = rootProject.ext.androidId
+def support = rootProject.ext.dependencies
+
+android {
+    compileSdk androidId.compileSdkVersion
+
+    defaultConfig {
+        applicationId androidId.applicationId
+        minSdk androidId.minSdkVersion
+        targetSdk androidId.targetSdkVersion
+        versionCode androidId.versionCode
+        versionName androidId.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation support.arouter_api
+    annotationProcessor support.arouter_compiler
+
+    implementation project(':library-base')
+    implementation project(':library-common')
+    implementation project(':library-network')
+    implementation support.particleview
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

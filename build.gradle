@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+            allowInsecureProtocol = true
+        }
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.0'
+        classpath "com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.2.0' apply false
+    id 'com.android.library' version '7.2.0' apply false
+}
+
+apply from: "config.gradle"
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
