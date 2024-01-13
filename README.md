@@ -1,5 +1,5 @@
 # Java_Movie
-一款基于 Java + MVVM + Jetpack + RxJava 的電影時刻表 App。
+一款基于 Java + MVVM + Jetpack + RxJava 的電影時刻表 App。<br /><br />
 Kotlin版：[Kotlin_Movie](https://github.com/WeirenZhang/Kotlin_Movie)<br /><br />
 Flutter版：[Flutter_Movie](https://github.com/WeirenZhang/Flutter_Movie)<br /><br />
 ReactNative版： [ReactNative_Movie](https://github.com/WeirenZhang/ReactNative_Movie)<br /><br />
