@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/movie_java.iml" filepath="$PROJECT_DIR$/.idea/modules/movie_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/movie_java.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/movie_java.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/movie_java.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/movie_java.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/movie_java.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/movie_java.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/movie_java.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/movie_java.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-base/movie_java.library-base.iml" filepath="$PROJECT_DIR$/.idea/modules/library-base/movie_java.library-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-base/movie_java.library-base.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-base/movie_java.library-base.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-base/movie_java.library-base.main.iml" filepath="$PROJECT_DIR$/.idea/modules/library-base/movie_java.library-base.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-base/movie_java.library-base.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-base/movie_java.library-base.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-common/movie_java.library-common.iml" filepath="$PROJECT_DIR$/.idea/modules/library-common/movie_java.library-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-common/movie_java.library-common.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-common/movie_java.library-common.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-common/movie_java.library-common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/library-common/movie_java.library-common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-common/movie_java.library-common.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-common/movie_java.library-common.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-network/movie_java.library-network.iml" filepath="$PROJECT_DIR$/.idea/modules/library-network/movie_java.library-network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-network/movie_java.library-network.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-network/movie_java.library-network.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-network/movie_java.library-network.main.iml" filepath="$PROJECT_DIR$/.idea/modules/library-network/movie_java.library-network.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-network/movie_java.library-network.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-network/movie_java.library-network.unitTest.iml" />
+    </modules>
+  </component>
+</project>

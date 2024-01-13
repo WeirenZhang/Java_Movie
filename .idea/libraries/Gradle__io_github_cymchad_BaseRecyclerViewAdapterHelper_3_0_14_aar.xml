@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.14@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6064dee3f981e2bba83a74db307bb07f/transformed/jetified-BaseRecyclerViewAdapterHelper-3.0.14/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6064dee3f981e2bba83a74db307bb07f/transformed/jetified-BaseRecyclerViewAdapterHelper-3.0.14/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6064dee3f981e2bba83a74db307bb07f/transformed/jetified-BaseRecyclerViewAdapterHelper-3.0.14/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.cymchad/BaseRecyclerViewAdapterHelper/3.0.14/3aa3c6f8aa0009876802f925f6be35e6e64f16c6/BaseRecyclerViewAdapterHelper-3.0.14-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.cymchad/BaseRecyclerViewAdapterHelper/3.0.14/30fc2a23b2600c82cdc4126f10f498991cfefbca/BaseRecyclerViewAdapterHelper-3.0.14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
