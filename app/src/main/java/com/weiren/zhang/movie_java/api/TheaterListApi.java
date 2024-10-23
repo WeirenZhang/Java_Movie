@@ -10,9 +10,9 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface TheaterListApi {
-    @GET("macros/s/AKfycbwwB2Ke85PFeQqt2P9BRZFOxWif6JI4_ImblPyfFlP-VTJLkJJ6sZkCMD4tPhF_g8yT/exec")
+    @GET("macros/s/AKfycbzNPN95_VIeYPTKF85yVS5oml_lUiVL0TUlQvuNj1krEUjUQFtBq_BY6eraap6zW2ZI/exec")
     Observable<List<TheaterAreaModel>> getTheaterList(@Query("type") String page);
 
-    @GET("macros/s/AKfycbwwB2Ke85PFeQqt2P9BRZFOxWif6JI4_ImblPyfFlP-VTJLkJJ6sZkCMD4tPhF_g8yT/exec")
+    @GET("macros/s/AKfycbzNPN95_VIeYPTKF85yVS5oml_lUiVL0TUlQvuNj1krEUjUQFtBq_BY6eraap6zW2ZI/exec")
     Observable<List<TheaterDateItemModel>> getTheaterResultList(@Query("cinema_id") String page, @Query("type") String type);
 }

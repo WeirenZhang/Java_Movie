@@ -3,6 +3,7 @@ package com.weiren.zhang.movie_java.activity.movielist;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -17,17 +18,28 @@ import com.weiren.zhang.movie_java.adapter.movielist.MovieListAdapter;
 import com.weiren.zhang.movie_java.R;
 import com.weiren.zhang.movie_java.databinding.RecyclerviewBinding;
 import com.weiren.zhang.movie_java.model.movielist.MovieListModel;
-import com.weiren.zhang.movie_java.viewmodel.movielist.MovieComingSoonViewModel;
+import com.weiren.zhang.movie_java.viewmodel.movielist.MovieListViewModel;
 
 import java.util.List;
 
-@Route(path = RouterActivityPath.MovieList.PATH_ComingSoon_HOME)
-public class MovieComingSoonActivity extends BaseBindVMActivity<RecyclerviewBinding, MovieComingSoonViewModel>
+@Route(path = RouterActivityPath.MovieList.PATH_MovieList_HOME)
+public class MovieListActivity extends BaseBindVMActivity<RecyclerviewBinding, MovieListViewModel>
         implements OnRefreshLoadMoreListener {
 
     private MovieListAdapter movieListAdapter;
 
     private PageInfo pageInfo;
+
+    @Autowired(name = BaseConstant.Home_ID_KEY)
+    public String Home_ID = "";
+
+    private String[] Text = new String[]{
+            "本周新片",
+            "本期首輪",
+            "本期二輪",
+            "近期上映",
+            "新片快報"
+    };
 
     @Override
     protected int getLayoutId() {
@@ -37,11 +49,12 @@ public class MovieComingSoonActivity extends BaseBindVMActivity<RecyclerviewBind
     @Override
     protected void initView() {
         super.initView();
+        ARouter.getInstance().inject(this);
 
         // set back button
         actionbar.setDisplayHomeAsUpEnabled(true);
         //set actionbar title
-        actionbar.setTitle("即將上映");
+        actionbar.setTitle(Text[Integer.parseInt(Home_ID)]);
 
         pageInfo = new PageInfo();
         setLoadSir(mViewDataBinding.includeRefresh.refresh);
@@ -94,7 +107,7 @@ public class MovieComingSoonActivity extends BaseBindVMActivity<RecyclerviewBind
     }
 
     private void loadData() {
-        mViewModel.getMovieComingSoonList(pageInfo.page);
+        mViewModel.getMovieList(pageInfo.page, Home_ID);
     }
 
     @Override

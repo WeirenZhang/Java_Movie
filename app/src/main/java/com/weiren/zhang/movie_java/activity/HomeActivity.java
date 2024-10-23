@@ -26,15 +26,21 @@ public class HomeActivity extends BaseBindActivity<ActivityMainBinding> {
     }
 
     private int[] image = new int[]{
+            R.drawable.enl_2,
             R.drawable.enl_1,
+            R.drawable.enl_1,
+            R.drawable.enl_4,
             R.drawable.enl_4,
             R.drawable.enl_5,
             R.drawable.enl_3,
             R.drawable.enl_6
     };
     private String[] imgText = new String[]{
-            "現正熱映",
-            "即將上映",
+            "本周新片",
+            "本期首輪",
+            "本期二輪",
+            "近期上映",
+            "新片快報",
             "電影院",
             "我的最愛",
             "網路訂票"
@@ -66,22 +72,34 @@ public class HomeActivity extends BaseBindActivity<ActivityMainBinding> {
         mViewDataBinding.mainPageGridview.setOnItemClickListener((parent, view, position, id) -> {
             switch (position) {
                 case 0:
-                    ARouter.getInstance().build(RouterActivityPath.MovieList.PATH_InTheater_HOME)
+                    ARouter.getInstance().build(RouterActivityPath.MovieList.PATH_MovieList_HOME).withString(BaseConstant.Home_ID_KEY, "0")
                             .navigation();
                     break;
                 case 1:
-                    ARouter.getInstance().build(RouterActivityPath.MovieList.PATH_ComingSoon_HOME)
+                    ARouter.getInstance().build(RouterActivityPath.MovieList.PATH_MovieList_HOME).withString(BaseConstant.Home_ID_KEY, "1")
                             .navigation();
                     break;
                 case 2:
-                    ARouter.getInstance().build(RouterActivityPath.Theater.PATH_Area_HOME)
+                    ARouter.getInstance().build(RouterActivityPath.MovieList.PATH_MovieList_HOME).withString(BaseConstant.Home_ID_KEY, "2")
                             .navigation();
                     break;
                 case 3:
-                    ARouter.getInstance().build(RouterActivityPath.MyFavourite.PATH_MyFavourite_HOME)
+                    ARouter.getInstance().build(RouterActivityPath.MovieList.PATH_MovieList_HOME).withString(BaseConstant.Home_ID_KEY, "3")
                             .navigation();
                     break;
                 case 4:
+                    ARouter.getInstance().build(RouterActivityPath.MovieList.PATH_MovieList_HOME).withString(BaseConstant.Home_ID_KEY, "4")
+                            .navigation();
+                    break;
+                case 5:
+                    ARouter.getInstance().build(RouterActivityPath.Theater.PATH_Area_HOME)
+                            .navigation();
+                    break;
+                case 6:
+                    ARouter.getInstance().build(RouterActivityPath.MyFavourite.PATH_MyFavourite_HOME)
+                            .navigation();
+                    break;
+                case 7:
                     VideoModel videoModel = new VideoModel(
                             "網路訂票",
                             "https://www.ezding.com.tw/faq?comeFromApp=true&device=app",

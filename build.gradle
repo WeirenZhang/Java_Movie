@@ -11,7 +11,6 @@ buildscript {
             allowInsecureProtocol = true
         }
         google()
-        jcenter()
         mavenCentral()
     }
     dependencies {

@@ -23,8 +23,7 @@ public class RouterActivityPath {
     }
 
     public static class MovieList {
-        public static final String PATH_ComingSoon_HOME = "/movielist/comingsoon";
-        public static final String PATH_InTheater_HOME = "/movielist/intheater";
+        public static final String PATH_MovieList_HOME = "/movielist/movielist";
     }
 
     public static class Theater {

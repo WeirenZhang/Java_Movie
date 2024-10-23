@@ -16,17 +16,17 @@ import com.weiren.zhang.movie_java.model.movielist.MovieListModel;
 
 import java.util.List;
 
-public class MovieComingSoonViewModel extends BaseViewModel {
+public class MovieListViewModel extends BaseViewModel {
 
     public MutableLiveData<List<MovieListModel>> mListMutable = new MutableLiveData<>();
 
-    public MovieComingSoonViewModel(@NonNull Application application) {
+    public MovieListViewModel(@NonNull Application application) {
         super(application);
     }
 
-    public void getMovieComingSoonList(int page) {
+    public void getMovieList(int page, String tab) {
         RetrofitHelper.getInstance().create(MovieListApi.class)
-                .getMovieList(String.valueOf(page), "MovieList", "1")
+                .getMovieList(String.valueOf(page), "MovieList", tab)
                 .compose(new IoMainScheduler<>())
                 .doOnSubscribe(this)  //  请求与ViewModel周期同步
                 .subscribe(new NetHelperObserver<>(new NetCallback<List<MovieListModel>>() {
